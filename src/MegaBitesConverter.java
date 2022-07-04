@@ -18,18 +18,20 @@ public class MegaBitesConverter {
     TIP: 1 MB = 1024 KB
     */
     public static void main(String[] args) {
-       int kiloBytesConvertido =  printMegaBytesAndKiloBytes(1000);
+       int kiloBytesConvertido =  printMegaBytesAndKiloBytes(2048);
         System.out.println(kiloBytesConvertido);
     }
     public static int printMegaBytesAndKiloBytes(int kiloBytes) {
 
-        int megaBytes = kiloBytes / 1000;
-        int remainderKiloBytes = kiloBytes % 1000;
-        if (kiloBytes % 1000 == 0) {
-            System.out.printf("%d KB = %d MB", kiloBytes, megaBytes);
-        }else if (kiloBytes % 1000 != 0) {
-            System.out.printf("%d KB = %d MB %d", kiloBytes, megaBytes, remainderKiloBytes);
+        int megaBytes = kiloBytes / 1024;
+        int remainderKiloBytes = kiloBytes % 1024;
+
+        if (kiloBytes % 1024 == 0) {
+            System.out.printf("%dKB = %dMB", kiloBytes, megaBytes);
+        }else if (kiloBytes % 1024 != 0) {
+            System.out.printf("%dKB = %dMB %dKB", kiloBytes, megaBytes, remainderKiloBytes);
         }
-            return -1;
+
+        return -1;
     }
 }

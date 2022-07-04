@@ -19,6 +19,7 @@ public class MegaBitesConverter {
     */
     public static void main(String[] args) {
 
+        printMegaBytesAndKiloBytes(5000);
 
     }
     public static void printMegaBytesAndKiloBytes(int kiloBytes) {
@@ -26,12 +27,12 @@ public class MegaBitesConverter {
         int megaBytes = kiloBytes / 1024;
         int remainderKiloBytes = kiloBytes % 1024;
 
-        if (kiloBytes % 1024 == 0) {
+        if (kiloBytes < 0) {
+            System.out.println("Invalid Value");
+        }else if (kiloBytes % 1024 == 0) {
             System.out.printf("%dKB = %dMB", kiloBytes, megaBytes);
-        }else if (kiloBytes % 1024 != 0) {
+        }else  {
             System.out.printf("%dKB = %dMB %dKB", kiloBytes, megaBytes, remainderKiloBytes);
         }
-
-
     }
 }

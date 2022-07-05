@@ -13,7 +13,8 @@ public class LeapYear {
     4. The year is a leap year (it has 366 days). The method isLeapYear needs to return true.
     5. The year is not a leap year (it has 365 days). The method isLeapYear needs to return false.*/
     public static void main(String[] args) {
-
+        boolean leapYear = isLeapYear(2015);
+        System.out.printf("Is leap year? %s", leapYear);
     }
     public static boolean isLeapYear(int year) {
         if (year < 1 || year > 9999) {
@@ -23,8 +24,14 @@ public class LeapYear {
             if (year % 100 == 0) { //inicio da  condicao 2
                 if (year % 400 == 0) { //inicio da  condicao 3
                     return true;
+                }else {
+                    return false;
                 }
+            } else{
+                return true;
             }
+        }else {
+            return false;
         }
 
     }

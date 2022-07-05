@@ -10,6 +10,8 @@ public class DecimalComparator {
             //  O desafio exige que os numeros sejam iguais ate a 3° casa decimal
             //  A diferença entre dois n iguais ate a 3° casa decimal sempre da como resultado 0.000
             //  O numero da 4° casa em diante nao faz diferença
+            //  O numero 0.0009 nao foi escolhido ao acaso. O valor maximo que o n da 4° casa decimal pode ter é o 9
+            //  Caso seja um numero maior o numero da 3° casa decimal sera diferente
             if (number1 - number2 <= 0.0009) {
                 return true;
             } else {
